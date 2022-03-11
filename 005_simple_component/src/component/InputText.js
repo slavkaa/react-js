@@ -6,8 +6,6 @@ const InputText = function() {
   return (
     <div>
       <div>{textData}</div>
-      <br/>
-      <br/>
       <input type="text" value={textData} onChange={event => setTextData(event.target.value)} />
     </div>
   )
