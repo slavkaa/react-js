@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 
 class InputText extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       textData: 'DEFAULT-TEXT'
     }
