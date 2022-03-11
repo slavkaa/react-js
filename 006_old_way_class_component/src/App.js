@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <br/><br/>
-      <InputText/> <br/><br/>
+      <InputText textData={'Hello world!'}/> <br/><br/>
       <InputText/> <br/><br/>
       <InputText/>
     </div>

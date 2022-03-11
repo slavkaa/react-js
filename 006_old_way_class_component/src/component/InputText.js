@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 
 class InputText extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    console.log(props)
     this.state = {
-      textData: 'DEFAULT-TEXT'
+      textData: props.textData ?? 'DEFAULT-TEXT'
     }
   }
 
