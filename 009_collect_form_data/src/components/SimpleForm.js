@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react'
 
 const SimpleForm = function() {
   const [state, setState] = useState({
