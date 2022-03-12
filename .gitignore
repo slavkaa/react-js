@@ -1,2 +1,5 @@
 /node_modules/
 /.idea/
+/010_simple_test_with_jest/node_modules/
+/010_simple_test_with_jest/dist/
+/010_simple_test_with_jest/.cache/
