@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import InputText from "./component/InputText";
+import InputText from "./components/InputText";
 
 function App() {
   return (
