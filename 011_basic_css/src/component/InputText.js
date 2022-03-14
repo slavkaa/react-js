@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const InputText = function() {
-  const [textData, setTextData] = useState(null)
+  const [textData, setTextData] = useState('')
 
   return (
     <div className="form-data">
