@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './App.css';
 
 function App() {
   const [textData, setTextData] = useState('DEFAULT TEXT')
