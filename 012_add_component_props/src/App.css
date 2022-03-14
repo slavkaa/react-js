@@ -1,0 +1,38 @@
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* styles */
+
+.app {
+    margin: 10px;
+}
+
+.form-data {
+    display: inline-block;
+    background-color: darkseagreen;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 20px;
+    max-width: 400px;
+}
+
+.form-data label {
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    margin-bottom: 10px;
+    min-height: 30px;
+}
+
+.form-data input[type="text"] {
+    border-radius: 4px;
+    line-height: 30px;
+    padding-left: 10px;
+    text-align: center;
+    width: 380px;
+}
