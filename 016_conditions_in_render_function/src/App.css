@@ -1,0 +1,93 @@
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+
+    color: #000;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+/* styles */
+
+.base-list {
+    max-width: 800px;
+    min-width: 600px;
+}
+
+.add-post-form,
+.base-post {
+    border: 2px solid #eee;
+    border-radius: 5px;
+    margin: 5px;
+    min-height: 100px;
+    padding: 15px;
+}
+
+.base-post img {
+    border-radius: 5px;
+    display: inline;
+    float: left;
+    width: 200px;
+}
+
+.base-post .post-right-sidebar {
+    display: inline;
+    margin-left: 10px;
+}
+
+.base-post .post-right-sidebar div {
+    margin-left: 230px;
+}
+
+.base-post .post-right-sidebar .badge {
+    background-color: #008000;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    height: 20px;
+    margin-left: 20px;
+    padding: 3px 12px;
+    text-shadow: -1px -1px #005000;
+}
+
+.base-post .post-right-sidebar .date {
+    float: right;
+    margin-right: 280px;
+    padding-left: 10px;
+}
+
+.base-post .post-right-sidebar .title {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.base-post .post-right-sidebar .text {
+    padding-top: 15px;
+}
+
+.add-post-form input {
+    border: 2px solid #eee;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 10px;
+    width: 96%;
+}
+
+/* buttons */
+
+#root .btn-info {
+    color: #00008b;
+    border-color: #00008b;
+    background-color: #a1bbff;
+}
+
+#root .btn-remove {
+    color: #8b0000;
+    border-color: #8b0000;
+    background-color: #ffcccc;
+    margin-top: 10px;
+}
