@@ -79,6 +79,15 @@
 
 /* buttons */
 
-.add-post-form .btn-info {
+#root .btn-info {
+    color: #00008b;
+    border-color: #00008b;
     background-color: #a1bbff;
+}
+
+#root .btn-remove {
+    color: #8b0000;
+    border-color: #8b0000;
+    background-color: #ffcccc;
+    margin-top: 10px;
 }

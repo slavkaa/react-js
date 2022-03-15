@@ -1,5 +1,6 @@
 import React, {useState, useRef} from "react"
 import PostItem from "./PostItem"
+import AddPostForm from "./AddPostForm";
 
 const PostsList = function(props) {
   return (
@@ -7,7 +8,7 @@ const PostsList = function(props) {
       <ul>
         {
           props.posts.map(post =>
-            <PostItem post={post} key={post.id}/>
+            <PostItem removePost={props.removePost} post={post} key={post.id}/>
           )
         }
       </ul>

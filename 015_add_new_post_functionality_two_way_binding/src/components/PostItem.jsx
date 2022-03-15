@@ -1,6 +1,7 @@
 import React, {useState} from "react";
+import DefaultButton from "./UI/buttons/DefaultButton";
 
-const PostItem = function(props) {
+const PostItem = function({removePost, ...props}) {
   return (
     <li className="base-post">
       <img src={props.post.image} />
@@ -10,6 +11,7 @@ const PostItem = function(props) {
         <div className="title">{props.post.title}</div>
         <div className="text">{props.post.text}</div>
       </div>
+      <DefaultButton className="btn-remove" onClick={() => removePost(props.post)}>Remove post </DefaultButton>
     </li>
   )
 }
