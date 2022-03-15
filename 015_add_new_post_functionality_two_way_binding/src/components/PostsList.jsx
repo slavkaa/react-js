@@ -50,6 +50,17 @@ const PostsList = function(props) {
     cleanUpForm()
   }
 
+  const setDefaultValues = (e) => {
+    e.preventDefault()
+    setNewPostData({
+      title: "Monolithic Application Performance Monitoring with Scout",
+      badge: "Sponsor",
+      date: "March 14th, 2022",
+      image: "https://laravelnews.imgix.net/images/monolithic-apm-featured.png",
+      text: "Scout APM gives metrics about smaller services and full tracing whenever any bug occurs. Monitoring can be utilized in a variety of disciplines to get the most out of the item under observation."
+    })
+  }
+
   const collectNewPostData = () => {
     return {
       id: Date.now(),
@@ -94,6 +105,7 @@ const PostsList = function(props) {
           placeholder="Text"
         />
         <DefaultButton onClick={addNewPost}>Add post</DefaultButton>
+        <DefaultButton className="btn-info" onClick={setDefaultValues}>Set default values</DefaultButton>
       </div>
       <ul>
         {

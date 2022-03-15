@@ -76,3 +76,9 @@
     padding: 0 10px;
     width: 96%;
 }
+
+/* buttons */
+
+.add-post-form .btn-info {
+    background-color: #a1bbff;
+}

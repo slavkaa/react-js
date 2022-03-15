@@ -3,7 +3,7 @@ import classes from "./DefaultButton.module.css"
 
 const DefaultButton = ({children, ...props}) => {
   return (
-    <button {...props} className={classes.defaultButton}>
+    <button {...props} className={[classes.defaultButton, props.className].join(' ')}>
       {children}
     </button>
   )
