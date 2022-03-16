@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PostsList from "./components/PostsList";
 import AddPostForm from "./components/AddPostForm";
+import PostsFilter from "./components/PostsFilter";
 
 import './App.css';
 
@@ -45,9 +46,15 @@ function App() {
     setPosts(posts.filter(p => p.id !== post.id))
   }
 
+  const applyPostsFilter = (e) => {
+    const sort = e.target.value
+    setPosts([...posts].sort((a, b) => a[sort].toString().localeCompare(b[sort].toString())))
+  }
+
   return (
     <div className="app">
       <AddPostForm posts={posts} addPost={addPost}/>
+      <PostsFilter applyPostsFilter={applyPostsFilter}/>
       <PostsList posts={posts} removePost={removePost}/>
     </div>
   );
