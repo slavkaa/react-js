@@ -1,0 +1,12 @@
+
+.defaultButton {
+    background: #aaddaa;
+    border: 2px solid #115511;
+    border-radius: 5px;
+    color: #115511;
+    cursor: pointer;
+    height: 40px;
+    margin: 5px auto;
+    padding: 5px 15px;
+    width: 98%;
+}
