@@ -44,8 +44,9 @@ function App() {
   const [postSearchResults, setPostsSearchResults] = useState(posts)
 
   const addPost = (post) => {
-    setPostsSearchResults([...posts, searchString])
-    addPost([...posts, post])
+    setPostsSearchResults([...posts, post])
+    setPosts([...posts, post])
+    updatePostsList()
   }
 
   const removePost = (post) => {
@@ -99,7 +100,7 @@ function App() {
 
   return (
     <div className="app">
-      <AddPostForm posts={posts} addPost={addPost}/>
+      <AddPostForm addPost={addPost}/>
       <PostsFilter updatePostsList={updatePostsList}/>
       <PostsSearch updatePostsList={updatePostsList} />
       <PostsList posts={postSearchResults} removePost={removePost}/>

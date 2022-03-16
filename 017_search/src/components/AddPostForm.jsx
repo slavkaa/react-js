@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import DefaultInput from "./UI/inputs/DefaultInput";
 import DefaultButton from "./UI/buttons/DefaultButton";
 
-const AddPostForm = ({posts, addPost, ...props}) => {
+const AddPostForm = ({addPost, ...props}) => {
   const [newPostData, setNewPostData] = useState({
     title: "Monolithic Application Performance Monitoring with Scout",
     badge: "Sponsor",
