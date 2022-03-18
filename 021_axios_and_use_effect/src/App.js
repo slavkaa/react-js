@@ -9,22 +9,24 @@ import DefaultModalWindow from "./components/UI/modal_windows/DefaultModalWindow
 import DefaultButton from "./components/UI/buttons/DefaultButton";
 import PostsSearch from "./components/PostsSearch";
 import {useInitPosts} from './hooks/useUpdatePostsList'
-import axios from "axios";
+import postsApi from "./api/postsApi";
 
 function App() {
   const [posts, setPosts] = useInitPosts()
   const [filter, setFilter] = useState('')
   const [searchString, setSearchString] = useState('')
   const [isDisplayAddPostModal, setIsDisplayAddPostModal] = useState(false)
+  const [isDisplayLoader, setIsDisplayLoader] = useState(true)
 
   const addPost = (post) => {
     setPosts([...posts, post])
   }
 
   async function fetchPosts() {
-    console.log('fetchPosts')
-    const response = await axios.get("https://reqres.in/api/users");
-    setPosts(response.data.data)
+    setTimeout(async () => {
+      setPosts(await postsApi.fetchPosts())
+      setIsDisplayLoader(false)
+    }, 1000) // just to test loader text
   }
 
   useEffect(() => {
@@ -82,7 +84,7 @@ function App() {
       </DefaultModalWindow>
       <PostsFilter value={filter} updateFilterValue={updateFilterValue}/>
       <PostsSearch updateSearchString={updateSearchString} />
-      <PostsList posts={postSearchResults} removePost={removePost}/>
+      <PostsList posts={postSearchResults} removePost={removePost} isDisplayLoader={isDisplayLoader}/>
       <DefaultButton onClick={() => { setIsDisplayAddPostModal(true) }}>Add Post</DefaultButton>
     </div>
   );
