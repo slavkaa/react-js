@@ -1,0 +1,10 @@
+
+.defaultInput {
+    border: 2px solid #eee;
+    border-radius: 5px;
+    display: block;
+    height: 30px;
+    margin: 5px auto;
+    padding: 0 10px;
+    width: 90%;
+}
