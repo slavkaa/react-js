@@ -1,0 +1,13 @@
+.navBar {
+    margin: 20px;
+}
+
+.navBarItem {
+    display: inline;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.navBarActive {
+    text-decoration: none;
+}
