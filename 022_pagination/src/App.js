@@ -18,7 +18,7 @@ import usersApi from "./api/usersApi";
 
 function App() {
   const [posts, setPosts] = useInitPosts()
-  const [postsListPage, setPostsListPage] = useState(1)
+  const [postsListCurrentPage, setPostsListCurrentPage] = useState(1)
   const [postsTotalPages, setPostsTotalPages] = useState(0)
 
   const [filter, setFilter] = useState('')
@@ -33,19 +33,16 @@ function App() {
 
   async function fetchPosts() {
     setTimeout(async () => {
-      const postsData = await usersApi.fetchPostsData(postsListPage)
-      console.log('postsData: ', postsData)
-      // setPostsTotalPages(postsData.total_pages)
-      setPostsTotalPages(15)
+      const postsData = await usersApi.fetchPostsData(postsListCurrentPage)
+      setPostsTotalPages(postsData.total_pages)
       setPosts(postsData.data)
       setIsDisplayLoader(false)
     }, 1000) // just to test loader text
   }
 
   useEffect(() => {
-    console.log('USE EFFECT')
     fetchPosts()
-  }, [postsListPage])
+  }, [postsListCurrentPage])
 
   const removePost = (post) => {
     setPosts(posts.filter(p => p.id !== post.id))
@@ -92,7 +89,7 @@ function App() {
   const usersListPaginatorOnChange = (pageNumber) => {
     console.log('usersListPaginatorOnChange')
     setIsDisplayLoader(true)
-    setPostsListPage(pageNumber)
+    setPostsListCurrentPage(pageNumber)
   }
 
   return (
@@ -108,7 +105,7 @@ function App() {
       <PostsSearch updateSearchString={updateSearchString} />
 
       <DefaultPaginator
-        currentPage={postsListPage}
+        currentPage={postsListCurrentPage}
         totalPages={postsTotalPages}
         showNearestPages={2}
         setPage={usersListPaginatorOnChange}
@@ -118,7 +115,7 @@ function App() {
       <PostsList posts={postSearchResults} removePost={removePost} isDisplayLoader={isDisplayLoader}/>
 
       <DefaultPaginator
-        currentPage={postsListPage}
+        currentPage={postsListCurrentPage}
         totalPages={postsTotalPages}
         showNearestPages={2}
         setPage={usersListPaginatorOnChange}
