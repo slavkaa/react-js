@@ -1,7 +1,7 @@
 import './App.css';
 
 import React from 'react'
-import {BrowserRouter, Routes, Route, Redirect} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import NavBar from "./components/UI/NavBar/NavBar";
 import Welcome from "./pages/Welcome";
 import Layout from "./pages/Layout";

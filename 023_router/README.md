@@ -1,6 +1,2 @@
-
-npm i axios
-
-https://jsonplaceholder.typicode.com/
-
-https://jsonplaceholder.typicode.com/posts
+https://reactrouter.com/
+ npm install react-router-dom@6
