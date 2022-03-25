@@ -1,0 +1,21 @@
+
+.container {
+    margin: 0 20px;
+}
+
+.container blockquote h1 {
+    font-family: Hurricane;
+    font-size: 50px;
+}
+
+.container blockquote p {
+    display: inline;
+    float: left;
+    font-size: 17px;
+    padding: 15px;
+    width: 450px;
+}
+
+.container blockquote span {
+    font-size: 17px;
+}
