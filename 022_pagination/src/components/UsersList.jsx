@@ -1,8 +1,8 @@
 import React from "react"
-import PostItem from "./PostItem"
+import ListItem from "./ListItem"
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 
-const PostsList = function({posts, removePost, isDisplayLoader}) {
+const UsersList = function({posts, isDisplayLoader}) {
 
   if (true === isDisplayLoader) {
     return (<div className="base-post">Posts loading ...</div>)
@@ -23,7 +23,7 @@ const PostsList = function({posts, removePost, isDisplayLoader}) {
                       timeout={500}
                       classNames="item"
                     >
-                      <PostItem removePost={removePost} post={post}/>
+                      <ListItem post={post}/>
                     </CSSTransition>
                   )
                 })
@@ -36,4 +36,4 @@ const PostsList = function({posts, removePost, isDisplayLoader}) {
   }
 }
 
-export default PostsList;
+export default UsersList;
