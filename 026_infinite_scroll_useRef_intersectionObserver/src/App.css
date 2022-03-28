@@ -1,0 +1,71 @@
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+
+    color: #000;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* styles */
+
+body {
+    margin: 20px;
+}
+
+.base-list {
+    max-width: 800px;
+    min-width: 600px;
+}
+
+.user-card {
+    border: 2px solid #eee;
+    border-radius: 5px;
+    margin: 5px;
+    min-height: 200px;
+    padding: 15px;
+}
+
+
+.user-card .card-right-sidebar {
+    display: inline;
+    margin-left: 10px;
+}
+
+.user-card .card-right-sidebar div {
+    margin-left: 10px;
+}
+
+.user-card .card-right-sidebar .data {
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 15px;
+    width: 600px;
+}
+
+/* buttons */
+
+#root .btn-info {
+    color: #00008b;
+    border-color: #00008b;
+    background-color: #a1bbff;
+}
+
+#root .btn-remove {
+    color: #8b0000;
+    border-color: #8b0000;
+    background-color: #ffcccc;
+    margin-top: 10px;
+}
+#root .btn-close {
+    float: right;
+    margin-right: 30px;
+    width: 40px;
+}
